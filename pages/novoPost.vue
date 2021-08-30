@@ -4,6 +4,7 @@
             <h1 class="text-3xl flex-1 font-semibold text-red-600">
                 Cadastrar Novo Post
             </h1>
+            <sub>Fazendo Deply</sub>
 
             <button class="bg-red-500 flex-5 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                 <NuxtLink to="/">Home</NuxtLink>
