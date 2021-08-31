@@ -52,7 +52,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: "http://localhost:8000"
+    baseURL: "http://ap-meu-blog.herokuapp.com/"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
