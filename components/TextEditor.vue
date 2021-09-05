@@ -3,7 +3,9 @@
         <input placeholder="Titulo" type="text" v-model="titulo"
                     class="text-1xl	 p-3 border border-gray-300 
                     shadow-md outline-none w-full"> 
-        <vue-editor class="my-2 rounded border border-gray-200" v-model="content" />
+        <client-only>
+            <vue-editor class="my-2 rounded border border-gray-200" v-model="content" />
+        </client-only>
         <button type="button" v-on:click="salvarPost" 
                     class="bg-blue-500 font-bold py-2 px-4 rounded text-white shadow-md">Salvar</button>
     </div>
