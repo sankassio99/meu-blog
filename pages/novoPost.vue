@@ -35,6 +35,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+@media (max-width: 1000px)
+{
+    section, header {
+        width: 90%;
+    }
+}
 </style>

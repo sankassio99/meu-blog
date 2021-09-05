@@ -3,7 +3,7 @@
   <div class="mx-auto">
     <navigation-menu></navigation-menu>
 
-    <header class="w-1/3 md:w-1/1 mx-auto text-center">
+    <header class="w-1/3 mx-auto text-center header-main">
       <p class="text-5xl font-bold text-gray-800 my-5">Meu pessoal blog</p>
       <p class="text-1xl  text-gray-400 mb-20">
         O lugar onde expresso meus pensamentos e conhecimentos em forma de texto
@@ -58,3 +58,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@media (max-width: 1000px)
+{
+  .header-main {
+    width: 90%;
+  }
+}
+</style>
