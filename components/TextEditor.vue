@@ -6,8 +6,10 @@
         <client-only>
             <vue-editor class="my-2 rounded border border-gray-200" v-model="content" />
         </client-only>
-        <button type="button" v-on:click="salvarPost" 
-                    class="bg-blue-500 font-bold py-2 px-4 rounded text-white shadow-md">Salvar</button>
+        <div class="flex flex-row-reverse">
+            <button type="button" v-on:click="salvarPost" 
+                    class="bg-blue-500 w-80 font-bold py-2 px-4 rounded text-white shadow-md">Salvar</button>
+        </div>
     </div>
 </template>
 
