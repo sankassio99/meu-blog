@@ -1,20 +1,24 @@
 <template>
 
-  <div class="w-1/2 mx-auto my-20">
-    <header class="flex space-x-5">
-      <h1 class="text-3xl flex-1 font-semibold text-red-600">
-        {{ titulo }}
-      </h1>
+  <div class="mx-auto">
+    <navigation-menu></navigation-menu>
 
-      <button class="bg-red-500 flex-5 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-        <NuxtLink to="/novopost">Novo Post</NuxtLink>
-      </button>
+    <header class="w-1/3 md:w-1/1 mx-auto text-center">
+      <p class="text-5xl font-bold text-gray-800 my-5">Meu pessoal blog</p>
+      <p class="text-1xl  text-gray-400 mb-20">
+        O lugar onde expresso meus pensamentos e conhecimentos em forma de texto
+      </p>
     </header>
 
-    <article v-for="artigo in listaArtigos" :key="artigo.id" class="my-20">
+  <div class="w-2/3 mx-auto border-b-2"></div>
+
+    <article v-for="artigo in listaArtigos" :key="artigo.id" 
+    class="w-1/2 mx-auto my-20">
+
       <h2 class="text-5xl font-semibold mb-5">{{ artigo.titulo }}</h2>
-      <p class="mb-5">{{ artigo.conteudo }}</p>
+      <p class="mb-5" v-html="artigo.conteudo">{{ artigo.conteudo }}</p>
       <p class="text-red-500">Ler mais</p>
+
     </article>
 
   </div>
@@ -22,11 +26,12 @@
 </template>
 
 <script>
+import NavigationMenu from '../components/NavegationMenu.vue'
 
 export default {
+  components: { NavigationMenu },
   data(){
     return {
-      titulo: "Super Blog",
       listaArtigos: []
     }
   },

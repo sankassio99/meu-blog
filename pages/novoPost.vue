@@ -1,52 +1,37 @@
 <template>
-    <div class="w-1/2 mx-auto my-20">
-        <header class="flex space-x-5">
-            <h1 class="text-3xl flex-1 font-semibold text-red-600">
-                Cadastrar Novo Post
-            </h1>
-            <sub>Fazendo Deply</sub>
+    <div class="">
+        <navigation-menu></navigation-menu>
+        
+        <header class="w-1/3 mx-auto text-center">
 
-            <button class="bg-red-500 flex-5 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                <NuxtLink to="/">Home</NuxtLink>
-            </button>
+            <p class="text-5xl font-bold text-gray-800 my-5">Criar novo post</p>
+            <p class="text-1xl  text-gray-400 mb-10">
+                Expresse suas ideias e seus pensamentos em forma de texto
+            </p>
+
         </header>
 
-        <section>
-            <form class="flex flex-col p-4">
-                <input placeholder="Titulo" type="text" v-model="titulo"
-                    class="text-3xl	 p-3 border border-transparent shadow-md mb-3 outline-none rounded w-full">
+        <div class="w-2/3 mx-auto border-b-2"></div>
 
-                <textarea placeholder="Conteúdo" v-model="conteudo"
-                    class="p-3 border border-transparent shadow-md mb-6 outline-none rounded"></textarea>
-
-                <button type="button" v-on:click="salvarPost" 
-                    class="bg-blue-500 font-bold py-2 px-4 rounded text-white shadow-md">Salvar</button>
-            </form>
+        <section class="w-2/3 mx-auto my-18">
+            <text-editor/>
         </section>
+        
     </div>
 </template>
 
 <script>
+import TextEditor from '../components/TextEditor.vue'
+import NavigationMenu from '../components/NavegationMenu.vue'
+
 export default {
+  components: { TextEditor, NavigationMenu },
     data(){
         return {
             titulo: "",
             conteudo: "",
         }
     },
-    methods: {
-        salvarPost(){
-            this.$axios
-                .post("/api/posts",{
-                    titulo: this.titulo,
-                    conteudo: this.conteudo
-                })
-                .then((response) => {
-                  alert("Salvo com sucesso")
-                })
-        },
-        
-    }
 }
 </script>
 
