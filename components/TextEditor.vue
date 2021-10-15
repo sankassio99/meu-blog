@@ -32,6 +32,11 @@ export default {
                 .then((response) => {
                   alert("Salvo com sucesso")
                 })
+                .catch(error=>{
+                    if(confirm("Sem autorização! Deseja fazer login?")){
+                        window.open("/login", "_self");
+                    }
+                })
         },
         
     }

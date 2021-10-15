@@ -10,23 +10,23 @@
             <ul class="w-2/3 mx-auto space-x-4">
                 <li class="item">
 
-                    <a href="#" class="flex items-center opacity-50	hover:opacity-90">
-                        <img style="width:18px;" src="../static/edit.png" alt="">
+                    <a href="#" class="flex items-center opacity-40	hover:opacity-90">
+                        <font-awesome-icon icon="edit"  class="pr-1"/>
                         <span>Editar</span>
                     </a>
                 </li>
                 <li class="item">
 
-                    <a href="#" class="flex items-center opacity-50 hover:opacity-90">
-                        <img style="width:18px;" src="../static/bin.png" alt="">
+                    <a href="#" class="flex items-center opacity-40 hover:opacity-90">
+                        <font-awesome-icon icon="trash" class="pr-1" />
                         <span>Excluir</span>
                     </a>
                 
                 </li>
                 <li class="item">
 
-                    <a href="#" class="flex items-center opacity-50 hover:opacity-90">
-                        <img style="width:18px;" src="../static/share.png" alt="">
+                    <a href="#" class="flex items-center opacity-40 hover:opacity-90">
+                        <font-awesome-icon icon="share-square"  class="pr-1" />
                         <span>Compartilhar</span>
                     </a>
                     
