@@ -1,7 +1,9 @@
 <template>
     <div class="flex items-center h-20 p-10">
         <h1 class="text-2xl flex-1 font-semibold text-gray-800 flex items-center">
-            <img src="../static/cpu.png" class="w-5 h-5 mt-1 mr-2" alt="cpu">
+            <span class="material-icons">
+            memory
+            </span>
             <NuxtLink to="/" >Kássio's Blog</NuxtLink>
         </h1>
         <div v-show="toggle" class="lg:space-x-3 items-center itens-menu">

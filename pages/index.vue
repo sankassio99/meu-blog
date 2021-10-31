@@ -21,9 +21,10 @@
 
     </article>
 
-    <div class="social-icons">
+    <!-- <div class="social-icons">
       <div class="icon">
         <a href="#"><img style="width:35px;" src="../static/github.png" alt=""></a>
+        <font-awesome-icon icon="user-secret" />
       </div>
       <div class="icon">
         <a href="#"><img style="width:35px;" src="../static/linkedin.png" alt=""></a>
@@ -31,7 +32,7 @@
       <div class="icon">
         <a href="#"><img src="../static/youtube.png" alt=""></a>
       </div>
-    </div>
+    </div> -->
 
   </div>
 

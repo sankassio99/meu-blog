@@ -11,14 +11,14 @@
                 <li class="item">
 
                     <a href="#" class="flex items-center opacity-50	hover:opacity-90">
-                        <img style="width:18px;" src="../static/edit.png" alt="">
+                        <span class="material-icons">edit</span>
                         <span>Editar</span>
                     </a>
                 </li>
                 <li class="item">
 
                     <a href="#" class="flex items-center opacity-50 hover:opacity-90">
-                        <img style="width:18px;" src="../static/bin.png" alt="">
+                        <span class="material-icons">delete</span>
                         <span>Excluir</span>
                     </a>
                 
@@ -26,7 +26,7 @@
                 <li class="item">
 
                     <a href="#" class="flex items-center opacity-50 hover:opacity-90">
-                        <img style="width:18px;" src="../static/share.png" alt="">
+                        <span class="material-icons">share</span>
                         <span>Compartilhar</span>
                     </a>
                     
