@@ -17,7 +17,7 @@
 
       <h2 class="text-5xl font-semibold mb-5">{{ artigo.titulo }}</h2>
       <p class="text-preview mb-5" v-html="artigo.conteudo">{{ artigo.conteudo }}</p>
-      <NuxtLink :to="'/'+artigo.id"> <p class="text-red-500">Ler mais</p></NuxtLink>
+      <NuxtLink :to="'/post/'+artigo.id"> <p class="text-red-500">Ler mais</p></NuxtLink>
 
     </article>
 

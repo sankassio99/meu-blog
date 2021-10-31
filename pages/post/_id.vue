@@ -10,7 +10,7 @@
             <ul class="w-2/3 mx-auto space-x-4">
                 <li class="item">
 
-                    <nuxt-link to="/novoPost" class="flex items-center opacity-50	hover:opacity-90">
+                    <nuxt-link :to="'/edit-post/'+post.id" class="flex items-center opacity-50	hover:opacity-90">
                         <span class="material-icons">edit</span>
                         <span>Editar</span>
                     </nuxt-link>
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import NavegationMenu from '../components/NavegationMenu.vue'
+import NavegationMenu from '../../components/NavegationMenu.vue'
 export default {
     data(){
         return {

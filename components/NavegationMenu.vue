@@ -11,7 +11,7 @@
             <NuxtLink to="/"><span class="font-medium text-gray-800">Posts</span></NuxtLink>
             <NuxtLink to="/"><span class="font-medium text-gray-800">Sobre</span></NuxtLink>
 
-            <NuxtLink to="/novopost"><button class="bg-red-500 flex-5 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            <NuxtLink to="/newPost"><button class="bg-red-500 flex-5 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                 Novo Post
             </button></NuxtLink>
         </div>
