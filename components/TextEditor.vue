@@ -31,6 +31,7 @@ export default {
                 })
                 .then((response) => {
                   alert("Salvo com sucesso")
+                  window.location.href = "/" ;
                 })
         },
         

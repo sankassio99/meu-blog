@@ -10,17 +10,18 @@
             <ul class="w-2/3 mx-auto space-x-4">
                 <li class="item">
 
-                    <a href="#" class="flex items-center opacity-50	hover:opacity-90">
+                    <nuxt-link to="/novoPost" class="flex items-center opacity-50	hover:opacity-90">
                         <span class="material-icons">edit</span>
                         <span>Editar</span>
-                    </a>
+                    </nuxt-link>
                 </li>
                 <li class="item">
 
-                    <a href="#" class="flex items-center opacity-50 hover:opacity-90">
+                    <button v-on:click="deletePost(post.id)"
+                    class="flex items-center opacity-50 hover:opacity-90" >
                         <span class="material-icons">delete</span>
                         <span>Excluir</span>
-                    </a>
+                    </button>
                 
                 </li>
                 <li class="item">
@@ -60,6 +61,16 @@ export default {
         // this.carregarListaArtigos()
     },
     methods: {
+        deletePost(id){
+            if(confirm("Tem certeza?")){
+                this.$axios
+                .delete(`/api/posts/${id}`)
+                .then((response) => {
+                    alert(response.data);
+                    window.location.href = "/" ;
+                })
+            }
+        },
         carregarListaArtigos(){
 
             this.$axios
