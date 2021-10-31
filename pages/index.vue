@@ -13,26 +13,14 @@
     <div class="w-2/3 mx-auto border-b-2"></div>
 
     <article v-for="artigo in listaArtigos" :key="artigo.id" 
-    class="w-1/2 mx-auto my-20">
+    class="w-1/2 mx-auto my-20 rounded-md p-3 drop-shadow-sm">
 
-      <h2 class="text-5xl font-semibold mb-5">{{ artigo.titulo }}</h2>
-      <p class="text-preview mb-5" v-html="artigo.conteudo">{{ artigo.conteudo }}</p>
+      <h2 class="text-2xl font-bold text-gray-800">{{ artigo.titulo }}</h2>
+      <p class="text-1xl text-gray-400 mb-2">Data de publicação: {{ dataFormat(artigo.created_at) }}</p>
+      <p class="text-preview mb-5 text-gray-800" v-html="artigo.conteudo">{{ artigo.conteudo }}</p>
       <NuxtLink :to="'/post/'+artigo.id"> <p class="text-red-500">Ler mais</p></NuxtLink>
 
     </article>
-
-    <!-- <div class="social-icons">
-      <div class="icon">
-        <a href="#"><img style="width:35px;" src="../static/github.png" alt=""></a>
-        <font-awesome-icon icon="user-secret" />
-      </div>
-      <div class="icon">
-        <a href="#"><img style="width:35px;" src="../static/linkedin.png" alt=""></a>
-      </div>
-      <div class="icon">
-        <a href="#"><img src="../static/youtube.png" alt=""></a>
-      </div>
-    </div> -->
 
   </div>
 
@@ -55,7 +43,14 @@ export default {
   //         this.listaArtigos = response.data;
   //       })
   // },
+  computed: {
+    
+  },
   methods: {
+    dataFormat(datePost){
+        let date = new Date(datePost);
+        return date.toLocaleDateString('pt-BR') ;
+    },
     carregarListaArtigos(){
 
       this.$axios
