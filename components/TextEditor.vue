@@ -8,9 +8,9 @@
         </client-only>
         <div class="flex flex-row-reverse">
             <button v-if="idPost" type="button" v-on:click="updatePost" 
-                    class="bg-blue-500 w-80 font-bold py-2 px-4 rounded text-white shadow-md">Salvar Edição</button>
+                    class="md:w-full bg-blue-500 w-80 font-bold py-2 px-4 rounded text-white shadow-md">Salvar Edição</button>
             <button v-else type="button" v-on:click="createPost" 
-                    class="bg-blue-500 w-80 font-bold py-2 px-4 rounded text-white shadow-md">Salvar</button>
+                    class="md:w-full bg-blue-500 w-80 font-bold py-2 px-4 rounded text-white shadow-md">Salvar</button>
         </div>
     </div>
 

@@ -3,7 +3,7 @@
         <navegation-menu/>
 
         <header class="w-2/3 mx-auto header-main">
-        <p class="text-5xl font-bold text-gray-800 my-5">{{ post.titulo }}</p>
+            <p class="text-5xl font-bold text-gray-800 my-5">{{ post.titulo }}</p>
         </header>
 
         <div class="control-menu my-4">
@@ -37,8 +37,8 @@
 
         <div class="w-2/3 mx-auto border-b-2 mb-10"></div>
 
-        <section class="w-2/3 mx-auto conteudo">
-            <div v-html="post.conteudo">
+        <section class="section_article">
+            <div class="content_article" v-html="post.conteudo">
                 {{ post.conteudo }}
             </div>
         </section>
@@ -85,6 +85,26 @@ export default {
 </script>
     
 <style>
+    @media (max-width: 780px)
+    {
+        .content_article {
+            width: 85%;
+        }
+        .header-main {
+            width: 85%;
+            margin-bottom: 20px;
+        }
+        .control-menu ul{
+            justify-content: center;
+        }
+    }
+    .section_article {
+        width: 100%;
+    }
+    .content_article {
+        max-width: 860px;
+        margin: 0 auto;
+    }
     .conteudo {
         text-align: justify;
     }

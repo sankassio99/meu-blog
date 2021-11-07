@@ -68,6 +68,12 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 764px)
+{
+  article {
+    width: 90%;
+  }
+}
 .text-preview {
   display: -webkit-box;
   -webkit-line-clamp: 5; /** número de linhas que você quer exibir */
