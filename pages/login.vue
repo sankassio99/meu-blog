@@ -5,10 +5,10 @@
                 <h1 class="text-4xl font-bold mb-3 text-gray-800">Login</h1>
             </div>
 
-            <form action="" class="">
+            <form @submit.prevent="addUserCurrent()" action="" class="">
                     <div class="inputs w-full">
-                        <input type="email" class="my-2 p-2 w-full outline-none rounded-sm" placeholder="E-mail" required>
-                        <input type="password" class="my-2 p-2 w-full outline-none rounded-sm" placeholder="Password" required>
+                        <input v-model="email" type="email" class="my-2 p-2 w-full outline-none rounded-sm" placeholder="E-mail" required>
+                        <input v-model="password" type="password" class="my-2 p-2 w-full outline-none rounded-sm" placeholder="Password" required>
                     </div>
 
                     <button type="submit" class="bg-red-400 text-white p-2 rounded-sm my-2 w-full">
@@ -24,8 +24,25 @@
 </template>
 
 <script>
-export default {
 
+export default {
+    data(){
+        return {
+            password: "",
+            email: ""
+        }
+    },
+    computed: {
+        getUser () {
+            return this.$store.state.user.userCurrent
+        }
+    },
+    methods: {
+        addUserCurrent () {
+            this.$store.commit('user/add', {email: this.email, password: this.password});
+            // e.target.value = ''
+        },
+    }
 }
 </script>
 

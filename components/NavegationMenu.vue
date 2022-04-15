@@ -4,7 +4,7 @@
             <span class="material-icons">
             memory
             </span>
-            <NuxtLink to="/" >Kássio's Blog</NuxtLink>
+            <NuxtLink to="/" >{{getUserName()}}'s Blog</NuxtLink>
         </h1>
         <transition name="slide-fade">
             <div v-show="toggle" class="lg:space-x-3 items-center itens-menu">
@@ -45,7 +45,11 @@ export default {
             }
 
             return false ;
-        }
+        },
+        getUserName () {
+            let userCurrent = this.$store.state.user.userCurrent
+            return userCurrent.email
+        },
     }
 
 }

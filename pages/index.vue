@@ -36,16 +36,7 @@ export default {
       listaArtigos: []
     }
   },
-  // async asyncData({ $axios }){
-  //   $axios
-  //       .get("http://localhost:8000/api/posts")
-  //       .then((response) => {
-  //         this.listaArtigos = response.data;
-  //       })
-  // },
-  computed: {
-    
-  },
+
   methods: {
     dataFormat(datePost){
         let date = new Date(datePost);
