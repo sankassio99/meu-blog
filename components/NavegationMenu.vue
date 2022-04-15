@@ -17,25 +17,17 @@
                 </button></NuxtLink>
             </div>
         </transition>
-        <div class="block lg:hidden">
-            <button v-on:click="menuToggle" 
-            class="flex items-center px-3
-             py-2 border rounded text-teal-200 border-teal-400 hover:border-white">
-                <span v-show="!toggle" class="material-icons">
-                menu
-                </span>
-                <span v-show="toggle" class="material-icons">
-                close
-                </span>
-            </button>
+        <div class="menu-mobile">
+            <navegation-menu-mobile></navegation-menu-mobile>
         </div>
         
     </div>
 </template>
 
 <script>
+import NavegationMenuMobileVue from './NavegationMenuMobile.vue';
 export default {
-
+    components: NavegationMenuMobileVue,
     data(){
         return {
            toggle: this.itsDesktop() ,
@@ -61,9 +53,14 @@ export default {
 
 <style scoped>
 
-
+.menu-mobile {
+    display: none;
+}
 @media (max-width: 1000px)
 {
+    .menu-mobile {
+        display: block;
+    }
     .itens-menu {
         position: absolute;
         left: 0;
@@ -71,7 +68,7 @@ export default {
         flex-direction: column;
         width: 100%;
         margin-top: 300px ;
-        height: 200px;
+        height: 100vh;
         justify-content: center;
         background-color: white ;
         z-index: 1;
