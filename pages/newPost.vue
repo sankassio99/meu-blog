@@ -25,13 +25,24 @@ import TextEditor from '../components/TextEditor.vue'
 import NavigationMenu from '../components/NavegationMenu.vue'
 
 export default {
-  components: { TextEditor, NavigationMenu },
+    components: { TextEditor, NavigationMenu },
     data(){
         return {
             titulo: "",
             conteudo: "",
         }
     },
+    mounted(){
+        let user = JSON.parse(JSON.stringify(this.userCurrent));
+        if(user.token == null){
+            this.$router.push('/login');
+        }
+    },
+    computed: {
+        userCurrent () {
+            return this.$store.getters['user/get']
+        }
+    }
 }
 </script>
 

@@ -48,7 +48,7 @@ export default {
         },
         getUserName () {
             let userCurrent = this.$store.state.user.userCurrent
-            return userCurrent.email
+            return userCurrent.name
         },
     }
 

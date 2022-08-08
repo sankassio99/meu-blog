@@ -12,3 +12,9 @@ export const mutations = {
       state.userCurrent = null
     },
 }
+
+export const getters = {
+  get: (state) => {
+    return state.userCurrent;
+  }
+}

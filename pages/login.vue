@@ -5,7 +5,7 @@
                 <h1 class="text-4xl font-bold mb-3 text-gray-800">Login</h1>
             </div>
 
-            <form @submit.prevent="addUserCurrent()" action="" class="">
+            <form @submit.prevent="authenticate()" action="" class="">
                     <div class="inputs w-full">
                         <input v-model="email" type="email" class="my-2 p-2 w-full outline-none rounded-sm" placeholder="E-mail" required>
                         <input v-model="password" type="password" class="my-2 p-2 w-full outline-none rounded-sm" placeholder="Password" required>
@@ -29,7 +29,8 @@ export default {
     data(){
         return {
             password: "",
-            email: ""
+            email: "",
+            token: ""
         }
     },
     computed: {
@@ -38,9 +39,24 @@ export default {
         }
     },
     methods: {
-        addUserCurrent () {
-            this.$store.commit('user/add', {email: this.email, password: this.password});
-            // e.target.value = ''
+        authenticate () {
+            // chamar na pai pra ver se ta ok
+            this.$axios.post("/api/login", {email: this.email, password: this.password })
+                .then((response) => {
+                    let token = response.data.access_token;
+                    let name= response.data.username;
+                    this.addUserCurrent(token, name);
+                    this.$router.push('/');
+                })
+        },
+        addUserCurrent (token, name) {
+            this.$store.commit('user/add', {
+                email: this.email, 
+                password: this.password, 
+                token: token,
+                name: name
+            });
+
         },
     }
 }
