@@ -48,13 +48,8 @@
 <script>
 import NavegationMenu from '../../components/NavegationMenu.vue'
 export default {
-    data(){
-        return {
-            
-        }
-    },
     async asyncData({ $axios, params }) {
-        const post = await $axios.$get('/api/posts/'+params.id);
+        const post = await $axios.$get('/api/posts/'+params.slug);
         return { post }
     },
     created(){

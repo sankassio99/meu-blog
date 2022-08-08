@@ -11,7 +11,7 @@
         <div class="w-2/3 mx-auto border-b-2"></div>
 
         <section class="w-2/3 mx-auto my-18">
-            <text-editor :idPost="id"/>
+            <text-editor :idPost="article"/>
         </section>
         
     </div>
@@ -25,11 +25,11 @@ export default {
   components: { TextEditor, NavigationMenu },
     data(){
         return {
-            id: "",
+            article: "",
         }
     },
     created(){
-        this.id = this.$route.params.id;
+        this.id = this.$route.params.article;
         // console.log(this.$route.params.id);
         // this.loadArticle();
     },

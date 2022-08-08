@@ -53,10 +53,10 @@ export default {
                   window.location.href = "/" ;
                 })
         },
-        loadArticle(id){
-            console.log("textEditor:"+id);
+        loadArticle(idPost){
+            console.log("textEditor:"+idPost);
             this.$axios
-                .get(`/api/posts/${id}`)
+                .get(`/api/posts/${idPost}`)
                 .then((response) => {
                     // console.log(response.data.titulo);
                     this.title = response.data.titulo ;
